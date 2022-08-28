@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+}
+.control {
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background-color: #fff;
+	justify-content: space-between;
+	padding: 0 1rem;
+}
+.control a {
+	color: #000;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	margin: 0 0.5rem;
+	opacity: 0.5;
+	transition: all 0.2s ease;
+}
+.control a:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
