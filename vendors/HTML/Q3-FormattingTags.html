@@ -5,25 +5,67 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Formatting Tags</title>
+		<link rel="stylesheet" href="../styles/style.css" />
 	</head>
 	<body>
+		<div class="control">
+			<a href="../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Q3-FormattingTags.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
 		<font face="sans-serif">
-			<marquee behavior="" direction="">Upto 50% Sale in Every Thing</marquee>
+			<marquee behavior="" direction=""
+				>Upto <mark> 50% </mark>Sale in Every Thing</marquee
+			>
 			<div class="">
-				<h1>John Doe's Shop</h1>
-				<p>We sell <b>books</b>,<i>DVDs</i> and <u>Pens</u></p>
-				<p>We Believe in <mark> Customer is God </mark></p>
-				<h3>Quote Of The Day</h3>
-				<blockquote
-					cite="https://www.holy-bhagavad-gita.org/chapter/2/verse/47"
+				<h1 style="text-align: center">John Doe's Shop</h1>
+				<p style="text-align: center">We sell <b> stationary </b></p>
+				<table
+					width="50%"
+					border="1"
+					align="center"
+					cellpadding="10"
+					cellspacing="0"
 				>
-					कर्मण्येवाधिकारस्ते मा फलेषु कदाचन । <br />
-					मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥
-				</blockquote>
-				<p>&copy;2022 John Doe</p>
-				<p>
-					<a href="../../index.html">Back To Home</a>
-				</p>
+					<caption style="margin: 10px">
+						<u> Today's Deals</u>
+					</caption>
+					<tr>
+						<th>SR No.</th>
+						<th>Item</th>
+						<th>Price</th>
+						<th>Discounted Price</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Pencil</td>
+						<td>Rs. 10</td>
+						<td>Rs. 5</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Pen</td>
+						<td>Rs. 20</td>
+						<td>Rs. 10</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Eraser</td>
+						<td>Rs. 5</td>
+						<td>Rs. 2</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Sharpener</td>
+						<td>Rs. 15</td>
+						<td>Rs. 7</td>
+					</tr>
+				</table>
+
+				<p style="text-align: center">&copy;2022 John Doe</p>
 			</div>
 		</font>
 	</body>
