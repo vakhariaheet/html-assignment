@@ -32,6 +32,35 @@
 				color: royalblue;
 				outline: none;
 			}
+			.btn {
+				display: block;
+				font-size: 1.3rem;
+				color: #000;
+				border: 1px solid #000;
+				padding: 1rem;
+				text-decoration: none;
+				font-family: 'Roboto', sans-serif;
+				background-color: #fff;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+			}
+			.btn-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				margin-top: 3rem;
+			}
+			.btn:hover,
+			.btn:focus {
+				background-color: royalblue;
+				color: #fff;
+				border-color: #fff;
+				outline: none;
+			}
+			.btn:active {
+				transform: scale(0.95);
+			}
 		</style>
 	</head>
 	<body>
@@ -78,6 +107,9 @@
 			<a href="./vendors/HTML/Q19-NestedListDemo2.html"
 				>Question 19:Nested List Demo 2</a
 			>
+		</div>
+		<div class="btn-container">
+			<a href="https://timmyurl.in/html-code" class="btn">View HTML Files</a>
 		</div>
 	</body>
 </html>

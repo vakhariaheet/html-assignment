@@ -8,9 +8,9 @@ Made by Heet Vakharia iMScIT,Div-b, Roll No:110
 
 ### Note
 
-- All HTML Files for question can found at `[/vendors/HTML](/vendors/HTML/)` Folder
+- All HTML Files for question can found at [/vendors/HTML](/vendors/HTML/) Folder
 - Preview for all the questions can found at https://timmyurl.in/html-demo
-- Images used can be found at `[/vendors/images](/vendors/images/)` Folder
+- Images used can be found at [/vendors/images](/vendors/images/) Folder
 
 ### Location
 
