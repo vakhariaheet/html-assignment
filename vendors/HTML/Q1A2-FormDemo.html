@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/style.css" />
+		<title>Customer Form</title>
+	</head>
+	<body>
+		<div class="control">
+			<a href="../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Q1A2-FormDemo.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<form action="">
+			<fieldset width="50%">
+				<fieldset>
+					<legend>Customer</legend>
+
+					<table>
+						<tr>
+							<td>
+								<label for="name">Name <span style="color: red">*</span></label>
+							</td>
+							<td>
+								<input type="text" name="name" id="name" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="email"
+									>Email <span style="color: red">*</span></label
+								>
+							</td>
+							<td>
+								<input type="email" name="email" id="email" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="investment">Investment </label>
+							</td>
+							<td>
+								<select name="investment" id="investment">
+									<option value="10,000">10,000</option>
+									<option value="20,000">20,000</option>
+									<option value="30,000">30,000</option>
+									<option value="40,000">40,000</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="dateJoined">
+									Date Joined
+									<span style="color: red">*</span>
+								</label>
+							</td>
+							<td>
+								<input type="date" name="dateJoined" id="dateJoined" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="active"> Active </label>
+							</td>
+							<td>
+								<input type="checkbox" name="active" id="active" />
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<div class="" style="margin: 0.5rem">
+					<button type="submit">OK</button>
+					<button type="reset">Cancel</button>
+				</div>
+			</fieldset>
+		</form>
+	</body>
+</html>

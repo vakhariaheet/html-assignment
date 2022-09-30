@@ -9,7 +9,7 @@ body {
 	background-color: #fff;
 	justify-content: space-between;
 	padding: 1rem;
-	box-shadow: #e930b733 0px 8px 24px;
+	box-shadow: rgba(55, 55, 55, 0.1) 0px 8px 24px;
 	margin-bottom: 1rem;
 }
 .control a {
