@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/style.css">
+		<title>Form Demo</title>
+		<style>
+			*,
+			*::after,
+			*::before {
+				padding: 0;
+				margin: 0;
+			}
+			form {
+				padding: 3rem;
+			}
+			td {
+				padding: 10px;
+				vertical-align: top;
+				
+			}
+			.bar {
+				padding: 1rem;
+				border-bottom: 1px solid grey;
+				background-color: rgb(224, 222, 222);
+				
+			}
+			table {
+				border: 1px solid #000;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="control">
+			<a href="../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Q2A2-FormDemo2.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<form action="">
+			<table width="100%" cellspacing="0">
+				<tr >
+					<th  class="bar" colspan="2" align="left">Testform</th>
+				</tr>
+				<tr>
+					<td class="label" width="30%">
+						<label for="name">Name</label>
+					</td>
+					<td class="input" width="60%">
+						<input type="text" name="name" id="name" />
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						<label for="password">Password</label>
+					</td>
+					<td class="input">
+						<input type="password" name="password" id="password" />
+					</td>
+				</tr>
+				<tr>
+					<td class="label">Gender</td>
+					<td>
+						<div>
+							<input type="radio" name="gender" id="male" />
+							<label for="male">Male</label>
+						</div>
+						<div>
+							<input type="radio" name="gender" id="female" />
+							<label for="female">Female</label>
+						</div>
+						<div>
+							<input type="radio" name="gender" id="other" />
+							<label for="other">Other</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="continent">Continent</td>
+					<td>
+						<select name="continent" id="continent">
+							<option value="asia">Asia</option>
+							<option value="africa">Africa</option>
+							<option value="europe">Europe</option>
+							<option value="northamerica">North America</option>
+							<option value="southamerica">South America</option>
+							<option value="australia">Australia</option>
+							<option value="antarctica">Antarctica</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">Meals</td>
+					<td>
+						<div>
+							<input type="checkbox" name="meals" id="breakfast" />
+							<label for="breakfast">Breakfast</label>
+						</div>
+						<div>
+							<input type="checkbox" name="meals" id="lunch" />
+							<label for="lunch">Lunch</label>
+						</div>
+						<div>
+							<input type="checkbox" name="meals" id="dinner" />
+							<label for="dinner">Dinner</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">Remarks</td>
+					<td>
+						<textarea name="comments" id="comments"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td class="bar" colspan="2" align="right">
+						<input type="submit" value="Save"/>
+						<input type="reset" value="Cancel"/>
+					</tdc>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
