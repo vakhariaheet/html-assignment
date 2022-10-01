@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .control {
 	display: flex;
@@ -29,7 +30,7 @@ body {
 }
 .footer__container {
 	height: max-content;
-	width: 100%;
+
 	background-color: #000;
 	padding: 2rem;
 	position: relative;
@@ -37,7 +38,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 2rem;
 }
 .footer_mantra {
 	font-size: 1.25rem;
