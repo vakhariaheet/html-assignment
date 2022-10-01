@@ -27,3 +27,54 @@ body {
 	opacity: 1;
 	transform: scale(1.1);
 }
+.footer__container {
+	height: max-content;
+	width: 100%;
+	background-color: #000;
+	padding: 2rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 2rem;
+}
+.footer_mantra {
+	font-size: 1.25rem;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+}
+.footer_mantra:last-of-type {
+	position: relative;
+}
+.footer_mantra:last-of-type::after {
+	content: '- श्रीमद् भगवद्गीता';
+	display: block;
+	position: relative;
+	left: 80%;
+	font-size: 0.75rem;
+	opacity: 0.6;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+}
+.footer_copyright {
+	color: rgba(255, 255, 255, 0.5);
+
+	text-align: center;
+	width: 100%;
+	font-size: 1rem;
+	bottom: 1rem;
+	margin-top: 3rem;
+}
+
+.footer_copyright a {
+	color: #fff;
+	opacity: 0.5;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+.footer_copyright a:hover {
+	opacity: 1;
+}
