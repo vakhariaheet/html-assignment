@@ -1,0 +1,35 @@
+h1 {
+	font-size: 1.5rem;
+	text-align: right;
+	vertical-align: top;
+	color: teal;
+	font-style: italic;
+	text-decoration: underline;
+}
+img {
+	height: auto;
+	width: 100%;
+}
+
+td {
+	font-size: 20px;
+	border: 1.25px solid steelblue !important;
+}
+th {
+	text-align: center;
+	border: 1.25px dotted steelblue !important;
+}
+table {
+	width: 90%;
+	margin: 30px;
+	border: 1.25px solid steelblue;
+	vertical-align: bottom;
+	font-family: 'Comic Sans MS';
+}
+
+tr {
+	border: 1.25px solid steelblue;
+}
+tr:first-of-type {
+	border: 1.25px dotted steelblue !important;
+}

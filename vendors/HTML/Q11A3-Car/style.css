@@ -1,0 +1,25 @@
+#preview {
+	width: 40%;
+	height: auto;
+}
+#date {
+	text-decoration: overline;
+	font-size: 1.5rem;
+}
+#container {
+	padding: 1rem;
+}
+#info {
+	font-size: 1.2rem;
+}
+span {
+	text-decoration: line-through;
+}
+body {
+	background: linear-gradient(
+		to right,
+		#8e2de2,
+		#4a00e0
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: #fff;
+}

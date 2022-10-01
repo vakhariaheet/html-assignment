@@ -1,0 +1,18 @@
+img {
+	height: 200px;
+	width: auto;
+}
+table {
+	width: 100%;
+}
+.company {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: left;
+	font-family: serif;
+}
+table,
+tr,
+td {
+	border: 1.5px dotted black;
+}
