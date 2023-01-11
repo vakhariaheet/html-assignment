@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Object Demo</title>
+	</head>
+	<body>
+		<script>
+			var studentInfo = {
+				firstName: 'Heet',
+				lastName: 'Vakharia',
+				rollNo: 114,
+				marks1: 80,
+				marks2: 70,
+				marks3: 90,
+			};
+			function write(...text) {
+				document.write(...text);
+				document.write('<br>');
+			}
+			write(
+				studentInfo.firstName +
+					' ' +
+					studentInfo.lastName +
+					'(' +
+					studentInfo.rollNo +
+					') scored ' +
+					studentInfo.marks1 +
+					',' +
+					studentInfo.marks2 +
+					'&' +
+					studentInfo.marks3,
+			);
+		</script>
+	</body>
+</html>

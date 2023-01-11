@@ -1,0 +1,12 @@
+var name = prompt("Enter your name");
+document.write("Your Name is Capital is " + name.toUpperCase());
+document.write('<br>');
+document.write("Your Name is lower is " + name.toLowerCase());
+document.write('<br>');
+document.write("Character is 5 position is " + name.charAt(5));
+document.write('<br>');
+document.write("Your Name is bold is " + name.bold());
+document.write('<br>');
+document.write("Your Name is italics is " + name.italics());
+document.write('<br>');
+document.write("Substring is " + name.substr(3,5));

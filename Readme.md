@@ -75,15 +75,15 @@ Made by Heet Vakharia iMScIT,Div-b, Roll No:114
 
 #### Assignment 4
 
-| Question No | Question                | Location                                                 |
-| ----------- | ----------------------- | -------------------------------------------------------- |
-| 1.          | Div Width Animation     | [/vendors/HTML/Q1A3-CSSDemo.html](/vendors/HTML/Q1.html) |
-| 2.          | Square Scale            | [/vendors/HTML/Q2.html](/vendors/HTML/Q2.html)           |
-| 3.          | Rectangle Color Change  | [/vendors/HTML/Q3.html](/vendors/HTML/Q3.html)           |
-| 4.          | Color Change with Scale | [/vendors/HTML/Q4.html](/vendors/HTML/Q4.html)           |
-| 5.          | Rotate and Color Change | [/vendors/HTML/Q5.html](/vendors/HTML/Q5.html)           |
-| 6.          | Rotate and Color Change | [/vendors/HTML/Q6.html](/vendors/HTML/Q6.html)           |
-| 7.          | Loading                 | [/vendors/HTML/Q7.html](/vendors/HTML/Q7.html)           |
-| 8.          | Wave Animation          | [/vendors/HTML/Q8.html](/vendors/HTML/Q8.html)           |
-| 9.          | Counter                 | [/vendors/HTML/Q9.html](/vendors/HTML/Q9.html)           |
-| 10.         | Text Change             | [/vendors/HTML/Q10.html](/vendors/HTML/Q10.html)         |
+| Question No | Question                         | Location                                                 |
+| ----------- | -------------------------------- | -------------------------------------------------------- |
+| 1.          | Div Width Animation              | [/vendors/HTML/Q1A3-CSSDemo.html](/vendors/HTML/Q1.html) |
+| 2.          | Square Scale                     | [/vendors/HTML/Q2.html](/vendors/HTML/Q2.html)           |
+| 3.          | Rectangle Color Change           | [/vendors/HTML/Q3.html](/vendors/HTML/Q3.html)           |
+| 4.          | Color Change with Scale          | [/vendors/HTML/Q4.html](/vendors/HTML/Q4.html)           |
+| 5.          | Rotate and Color Change on Hover | [/vendors/HTML/Q5.html](/vendors/HTML/Q5.html)           |
+| 6.          | Rotate and Color Change          | [/vendors/HTML/Q6.html](/vendors/HTML/Q6.html)           |
+| 7.          | Loading                          | [/vendors/HTML/Q7.html](/vendors/HTML/Q7.html)           |
+| 8.          | Wave Animation                   | [/vendors/HTML/Q8.html](/vendors/HTML/Q8.html)           |
+| 9.          | Counter                          | [/vendors/HTML/Q9.html](/vendors/HTML/Q9.html)           |
+| 10.         | Text Change                      | [/vendors/HTML/Q10.html](/vendors/HTML/Q10.html)         |

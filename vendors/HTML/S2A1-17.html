@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fatorial</h1>
+    <input type="text" id="input">
+    <button onclick="onBtnClick()">Calculate</button>
+    <p id="info"></p>
+    <script>    
+    //    Find Factorial using recursion
+    function factorial(n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+    var input = document.querySelector("#input");
+    var button = document.querySelector("button");
+    function onBtnClick() {
+        var input = document.querySelector("#input");
+        var info = document.querySelector("#info");
+        var n = input.value;
+        var result = factorial(n);
+        info.innerHTML = result;
+    }
+    </script>
+</body>
+</html>
