@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Area of Circle</title>
+		<link rel="stylesheet" href="../../../styles/style.css">
+
+	</head>
+	<body>
+		<div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 1 & 2 /S2A1-9.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<script>
+			const PI = 3.14;
+			function area(radius) {
+				return PI * radius * radius;
+			}
+            var radius = parseInt(prompt("Enter radius of a circle"));
+            var area = area(radius);
+            alert("Area of a circle whose radius is "+ radius +" is " + area);
+		</script>
+	</body>
+</html>

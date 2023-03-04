@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../styles/style.css">
+		<title>Animation 2</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			.main {
+				height: 500px;
+				width: 500px;
+				background: #fff;
+				border: 1px solid #000;
+				margin: 0;
+			}
+			.main:hover .square {
+				scale: 1;
+			}
+
+			.square {
+				height: 500px;
+				width: 500px;
+				background: #212121;
+				scale: 0;
+				transition: all 0.3s ease;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Q2.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<h1>Main Div 👇👇👇👇👇👇</h1>
+
+		<div class="main">
+			<div class="square"></div>
+		</div>
+	</body>
+</html>

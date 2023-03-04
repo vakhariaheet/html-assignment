@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../styles/style.css">
+		<title>Styled Form</title>
+		<style>
+			.cont {
+				margin-bottom: 1rem;
+			}
+			button {
+				font-size: 15px;
+				padding: 0 50px;
+				background-color: darkorange;
+				color: white;
+				border-radius: 10px;
+				border: none;
+				cursor: pointer;
+				height: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.submit--container {
+				display: flex;
+				justify-content: center;
+			}
+			button img {
+				height: 20px;
+				width: 20px;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body style="background-color: chartreuse">
+		<div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Q4A2-StyledForm.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<form action="" align="center">
+			<h1 style="color: red">Personal Details</h1>
+
+			<div class="cont">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" />
+			</div>
+			<div class="cont">
+				<label for="password">Password</label>
+				<input type="password" name="password" id="password" />
+			</div>
+			<div class="cont">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div class="cont">
+				<span>Gender: </span>
+				<input type="radio" name="gender" id="male" />
+				<label for="male">Male</label>
+				<input type="radio" name="gender" id="female" />
+				<label for="female">Female</label>
+			</div>
+			<div class="cont">
+				<label for="contact">Contact: </label>
+				<input type="text" name="contact" id="contact" />
+			</div>
+			<h1 style="color: red">Educational Qualification</h1>
+			<div class="cont">
+				<label for="degree">Degree</label>
+				<select name="degree" id="">
+					<option value="Select">-- Select Group --</option>
+					<option value="Select">A</option>
+					<option value="Select">B</option>
+					<option value="Select">A and B</option>
+				</select>
+			</div>
+			<div class="cont">
+				<label for="engineering">Engineering</label>
+				<select name="engineering" id="">
+					<option value="Select">-- Select Group --</option>
+					<option value="CS">Computer Science</option>
+					<option value="IT">Information Technology</option>
+					<option value="EC">Electronics and Communication</option>
+					<option value="EE">Electrical Engineering</option>
+					<option value="ME">Mechanical Engineering</option>
+					<option value="CE">Civil Engineering</option>
+				</select>
+			</div>
+			<div class="cont">
+				<span>Hobbies</span>
+				<input type="checkbox" name="hobbies" id="chess" />
+				<label for="chess">Playing</label>
+				<input type="checkbox" name="hobbies" id="reading" />
+				<label for="reading">Reading Book</label>
+			</div>
+			<h1 style="color: red">Address</h1>
+			<div class="cont">
+				<textarea name="address" id="address" cols="60" rows="7"></textarea>
+			</div>
+			<div class="cont">
+				<label for="resume">Attach Resume</label>
+				<input type="file" name="resume" id="resume" />
+			</div>
+			<div class="cont submit--container">
+				<button>
+					<span style="margin-right: 5px">Submit</span>
+					<img src="./../../../images/arrow.png" alt="" />
+				</button>
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+    <title>Employee Form</title>
+    <style>
+        label{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="control">
+        <a href="../../../../../index.html">Back To Home</a>
+        <a
+            href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 3/Q6.html"
+            target="_blank"
+            >View HTML</a
+        >
+    </div>
+    <form action="">
+        <label for="name">
+            Name:<input type="text" id="name">
+        </label>
+        <label for="age">
+            Age:<input type="text" id="age">
+        </label>
+        <label for="department">
+            Department:<input type="text" id="department">
+        </label>
+        <label for="designation">
+            Designation:<input type="text" id="designation">
+        </label>
+        <label for="salary">
+            Salary:<input type="text" id="salary">
+        </label>
+        <label for="days">
+            Days:<input type="text" id="days">
+        </label>
+        <input type="button" value="Sign Up" onclick="onSignUp()">
+    </form>
+    <div id="error"></div>
+    <script>
+        function onSignUp(){
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var department = document.getElementById("department").value;
+            var designation = document.getElementById("designation").value;
+            var salary = document.getElementById("salary").value;
+            var days = document.getElementById("days").value;
+            var error = document.getElementById("error");
+            if(!name || !age || !department || !designation || !salary || !days){
+                error.innerHTML = "All fields are mandatory";
+                return;
+            }
+            if(isNaN(age) || isNaN(salary) || isNaN(days)){
+                error.innerHTML = "Age, Salary and Days should be numbers";
+                return;
+            }
+            if(age < 18){
+                error.innerHTML = "Age should be greater than 18";
+                return;
+            }
+            if(days > 25 && salary != 10000){
+                error.innerHTML = "Salary should be 10000 if days are greater than 25";
+                return;
+            }
+            if(days < 25 && salary != 8000){
+                error.innerHTML = "Salary should be 8000 if days are less than 25";
+                return;
+            }
+            error.innerHTML = "Form Submitted Successfully";
+        };
+    </script>
+</body>
+</html>

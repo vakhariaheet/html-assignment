@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+<body>
+    <div class="control">
+        <a href="../../../../../index.html">Back To Home</a>
+        <a
+            href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 1 & 2 /S2A1-17.html"
+            target="_blank"
+            >View HTML</a
+        >
+    </div>
+    <h1>Fatorial</h1>
+    <input type="text" id="input">
+    <button onclick="onBtnClick()">Calculate</button>
+    <p id="info"></p>
+    <script>    
+    //    Find Factorial using recursion
+    function factorial(i) {
+        if (i == 0) {
+            return 1;
+        } else {
+            return i * factorial(i - 1); // 3 * 2 * 1 * 1
+        }
+    }
+    var input = document.querySelector("#input");
+    var button = document.querySelector("button");
+    function onBtnClick() {
+        var input = document.querySelector("#input");
+        var info = document.querySelector("#info");
+        var n = input.value;
+        var result = factorial(n);
+        info.innerHTML = result;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../../styles/style.css">
+
+		<title>Name & Age</title>
+        <style>
+            label{
+                display: block;
+                font-size: 2rem;
+                
+            }
+            input{
+                margin: 10px;
+                padding: 1rem .5rem ;
+                font-size: 1.5rem;
+            }
+            input[type="button"]{
+                background-color: #414141;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                width: 500px;
+                transition: all .2s ease-in-out;
+            }
+            input[type="button"]:hover{
+                background-color: #000;
+            }
+        </style>
+	</head>
+	<body>
+        <div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 3/Q5.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<form>
+			<label for="name"> Name:<input type="text" id="name" /> </label>
+            
+			<label for="age"> Age:<input type="text" id="age" /> </label>
+            
+			<input type="button" value="Submit" onclick="onSubmit()" />
+		</form>
+		<div id="error"></div>
+		<script>
+			function onSubmit() {
+				var name = document.getElementById('name').value;
+				var age = document.getElementById('age').value;
+				var error = document.getElementById('error');
+				if (name.length < 5 || name.length > 15 || !isNaN(name)) {
+					return (error.innerHTML =
+						'Name should be between 5 to 15 characters and should not contain numbers');
+				}
+				if (age < 18 || isNaN(age)) {
+					return (error.innerHTML = 'Age should be greater than 18');
+				}
+				error.innerHTML = 'Form Submitted Successfully';
+			}
+		</script>
+	</body>
+</html>

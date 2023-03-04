@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../styles/style.css" />
+
+		<title>Sign Up</title>
+		<style>
+			body {
+				background-color: purple;
+			}
+			.container {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+			form,.success {
+				width: 30%;
+				background-color: rgb(73, 11, 73);
+				padding: 1rem 5rem;
+
+				border-radius: 10px;
+			}
+            .success p{
+                font-size: 1.5rem;
+                color: white;
+
+            }
+            .success a{
+                color: white;
+                text-decoration: none;
+                opacity: .8;
+            }
+            .success a:hover{
+                opacity: 1;
+            }
+            .success h1 {
+                color: white;
+                font-size: 2rem;
+                text-align: center;
+            }
+            .success p span {
+                font-weight: bold;
+            }
+			table {
+				width: 100%;
+			}
+			table tr td {
+				padding: 10px;
+				width: 50%;
+				font-size: 1.3rem;
+			}
+			input[type='button'] {
+				width: 100%;
+				padding: 20px;
+				background-color: white;
+				color: black;
+				border: none;
+				border-radius: 5px;
+				font-size: 1.5rem;
+				cursor: pointer;
+			}
+			input[type='text'],
+			input[type='password'],
+			select {
+				width: 100%;
+				padding: 10px;
+				border-radius: 5px;
+				border: 1px solid;
+			}
+			td {
+				color: white;
+			}
+			textarea {
+				width: 100%;
+				padding: 10px;
+				max-height: 30px;
+				border-radius: 5px;
+			}
+			#message {
+				font-size: 1.3rem;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 3/Q10.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<div class="container">
+			<form>
+				<!-- Name, Email,Password,Phone,Gender,Language(Select), Zip Code,About(Textbox) -->
+				<table>
+					<tr>
+						<td>Name</td>
+						<td><input type="text" id="name" /></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><input type="text" id="email" /></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" id="password" /></td>
+					</tr>
+					<tr>
+						<td>Phone Number</td>
+						<td><input type="text" id="phone" /></td>
+					</tr>
+					<tr>
+						<td>Gender</td>
+						<td class="gender">
+							<label for="male">
+								Male: <input type="radio" name="gender" id="male" />
+							</label>
+							<label for="female">
+								Female: <input type="radio" name="gender" id="female" />
+							</label>
+							<label for="other">
+								Other: <input type="radio" name="gender" id="other" />
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>Language</td>
+						<td>
+							<select id="language">
+								<option value="Select Language">Select Language</option>
+								<option value="English">English</option>
+								<option value="Hindi">Hindi</option>
+								<option value="Marathi">Marathi</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Zip Code</td>
+						<td><input type="text" id="zipCode" /></td>
+					</tr>
+					<tr>
+						<td>About</td>
+						<td><textarea id="about" cols="30" rows="10"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="button" value="Register" onclick="onSignUp()" />
+						</td>
+					</tr>
+				</table>
+				<div id="message"></div>
+			</form>
+		</div>
+		<script>
+			function onSignUp() {
+				var name = document.getElementById('name').value;
+				var email = document.getElementById('email').value;
+				var password = document.getElementById('password').value;
+				var container = document.querySelector('.container');
+				var phone = document.getElementById('phone').value;
+				var language = document.getElementById('language').value;
+				var zipCode = document.getElementById('zipCode').value;
+				var about = document.getElementById('about').value;
+				var message = document.getElementById('message');
+				if (
+					!name ||
+					!email ||
+					!password ||
+					!phone ||
+					!language ||
+					!zipCode ||
+					!about
+				) {
+					message.innerHTML = 'All fields are mandatory';
+					return;
+				}
+				if (name.length < 6) {
+					message.innerHTML = 'Name should be atleast 6 characters';
+					return;
+				}
+				if (!isEmail(email)) {
+					message.innerHTML = 'Email is not valid';
+					return;
+				}
+				if (password.length != 10) {
+					message.innerHTML = 'Password should be 10 characters';
+					return;
+				}
+
+				if (phone.length != 10) {
+					message.innerHTML = 'Phone should be 10 digits';
+					return;
+				}
+				if (language == 'Select Language') {
+					message.innerHTML = 'Please select a language';
+					return;
+				}
+				if (zipCode.length != 6) {
+					message.innerHTML = 'Zip Code should be 6 digits';
+					return;
+				}
+				container.innerHTML = `
+                <div class="success">
+                    <h1>Success</h1>
+                    <p>Name: <span>${name}</span></p>
+                    <p>Email: <span>${email}</span></p>
+                    <p>Phone: <span>${phone}</span></p>
+                    <p>Language: <span>${language}</span> </p>
+                    <p>Zip Code: <span>${zipCode}</span></p>
+                    <p>About: <span>${about}</span></p>
+                    <a href="">ReSubmit Form</a>
+                </div>
+                `;
+			}
+			/**
+			 * Checks Where string is a Valid Email
+			 * @params {string} value
+			 * @returns {boolean}
+			 **/
+			function isEmail(value) {
+				var atPos = value.indexOf('@');
+				var dotPos = value.lastIndexOf('.');
+				if (atPos == -1 || dotPos == -1) return false;
+				if (atPos == 0 || dotPos == value.length - 1) return false;
+				if (atPos + 2 > dotPos) return false;
+				return true;
+			}
+		</script>
+	</body>
+</html>

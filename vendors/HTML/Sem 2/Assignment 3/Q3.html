@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Student Detail Form</title>
+		<link rel="stylesheet" href="../../../styles/style.css" />
+        <style>
+            label{
+                display: block;
+                margin-bottom: .5rem;
+            }
+            h1{
+                text-transform: uppercase;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 3/Q3.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+        <h1>Student Detail Form</h1>
+        <form>
+            <label for="fname">First Name: <input type="text" name="fname" id="fname" /></label>
+            <label for="lname">Last Name:<input type="text" name="lname" id="lname" /></label>
+            <label for="addr">Address:<input type="text" name="addr" id="addr" /></label>
+            <label for="Phone">Phone Number: <input type="text" name="phone" id="phone" /></label>
+            <input type="button" value="Submit" onclick="onSubmit()" />
+        </form>
+        <p class="message"></p>
+        <script>
+            function onSubmit () {
+                var fname = document.getElementById('fname').value;
+                var lname = document.getElementById('lname').value;
+                var addr = document.getElementById('addr').value;
+                var phone = document.getElementById('phone').value;
+                var message = document.querySelector('.message');
+                if (!fname || !lname || !addr || !phone) {
+                   return message.innerHTML = 'Please fill all the fields';
+                }
+                if(!isNaN(fname) || !isNaN(lname)){
+                   return message.innerHTML = 'First Name and Last Name should be in string';
+                }
+                if(isNaN(phone) || phone.length != 10){
+                  return  message.innerHTML = 'Phone Number should be in number and 10 digits';
+                }
+                message.innerHTML = 'Form Submitted Successfully';
+            }
+        </script>
+	</body>
+</html>

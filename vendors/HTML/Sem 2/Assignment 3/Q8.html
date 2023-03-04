@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../../styles/style.css">
+
+		<title>Sign Up Form</title>
+        <style>
+            label{
+                display: block;
+            }
+        </style>
+	</head>
+	<body>
+        <div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 3/Q8.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<form action="">
+			<!-- Email,Password & Confirm Password -->
+			<label for="email"> Email:<input type="email" id="email" /> </label>
+			<label for="password">
+				Password:<input type="password" id="password" />
+			</label>
+			<label for="confirmPassword">
+				Confirm Password:<input type="password" id="confirmPassword" />
+			</label>
+			<input type="button" value="Sign Up" onclick="onSignUp()" />
+		</form>
+		<div id="error"></div>
+		<script>
+			function onSignUp() {
+				var email = document.getElementById('email').value;
+				var password = document.getElementById('password').value;
+				var confirmPassword = document.getElementById('confirmPassword').value;
+				var error = document.getElementById('error');
+				if (!email || !password || !confirmPassword) {
+					error.innerHTML = 'All fields are mandatory';
+					return;
+				}
+                if(!isEmail(email))
+                   return error.innerHTML = 'Invalid Email';
+                if (password.length < 8) {
+                    error.innerHTML = 'Password should be atleast 8 characters';
+                    return;
+                }
+				if (password != confirmPassword) {
+					error.innerHTML = 'Password and Confirm Password should be same';
+					return;
+				}
+				error.innerHTML = 'Sign Up Successful';
+			}
+			/**
+			 * Checks Where string is a Valid Email
+			 * @params {string} value
+			 * @returns {boolean}
+			 **/
+			function isEmail(value) {
+				var atPos = value.indexOf('@');
+				var dotPos = value.lastIndexOf('.');
+				if (atPos == -1 || dotPos == -1) return false;
+				if (atPos == 0 || dotPos == value.length - 1) return false;
+				if (atPos + 2 > dotPos) return false;
+				return true;
+			}
+		</script>
+	</body>
+</html>

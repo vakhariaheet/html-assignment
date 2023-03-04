@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+    <title>Sign Up</title>
+    <style>
+        label{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="control">
+        <a href="../../../../../index.html">Back To Home</a>
+        <a
+            href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 3/Q9.html"
+            target="_blank"
+            >View HTML</a
+        >
+    </div>
+    <form action="">
+        <!-- Name Semester Marks of 3 subs -->
+        <label for="name">Name:<input type="text" id="name"></label>
+        <label for="sem">Semester:<input type="text" id="sem"></label>
+        <label for="sub1">Subject 1:<input type="text" id="sub1"></label>
+        <label for="sub2">Subject 2:<input type="text" id="sub2"></label>
+        <label for="sub3">Subject 3:<input type="text" id="sub3"></label>
+        <input type="button" value="Sign Up" onclick="onSignUp()">
+    </form>
+    <div id="error"></div>
+    <script>    
+        function onSignUp(){
+            var name = document.getElementById("name").value;
+            var sem = document.getElementById("sem").value;
+            var sub1 = document.getElementById("sub1").value;
+            var sub2 = document.getElementById("sub2").value;
+            var sub3 = document.getElementById("sub3").value;
+            var error = document.getElementById("error");
+            if(!name || !sem || !sub1 || !sub2 || !sub3){
+                error.innerHTML = "All fields are mandatory";
+                return;
+            }
+            if(isNaN(sem) || isNaN(sub1) || isNaN(sub2) || isNaN(sub3)){
+                error.innerHTML = "Semester and Marks should be numbers";
+                return;
+            }
+            if(sem < 1 || sem > 8){
+                error.innerHTML = "Semester should be between 1 and 8";
+                return;
+            }
+            if(sub1 < 0 || sub1 > 100 || sub2 < 0 || sub2 > 100 || sub3 < 0 || sub3 > 100){
+                error.innerHTML = "Marks should be between 0 and 100";
+                return;
+            }
+            if(sub1 < 35 || sub2 < 35 || sub3 < 35){
+                error.innerHTML = "Marks should be greater than 35";
+                return;
+            }
+            error.innerHTML = `
+               <p> Name: ${name}</p>
+               <p> Semester: ${sem}</p>
+               <p> Subject 1: ${sub1}</p>
+               <p> Subject 2: ${sub2}</p>
+                <p>Subject 3: ${sub3}</p>
+                <p>Total: ${parseInt(sub1) + parseInt(sub2) + parseInt(sub3)}</p>
+               <p> Average: ${(parseInt(sub1) + parseInt(sub2) + parseInt(sub3)) / 3}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

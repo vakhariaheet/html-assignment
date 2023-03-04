@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../styles/style.css">
+
+		<title>Form</title>
+	</head>
+	<body>
+		<div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 3/Q4.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<h1>Registration Form</h1>
+		<form action="">
+			<div class="input-container">
+				<label for=""> FirstName*: <input type="text" id="fName" /> </label>
+			</div>
+			<div class="input-container">
+				<label for=""> LastName*: <input type="text" id="lName" /> </label>
+			</div>
+			<div class="input-container">
+				Gender*:
+				<label for="male">
+					<input type="radio" name="gender" id="male" checked/>Male
+				</label>
+				<label for="female">
+					<input type="radio" name="gender" id="female" />Female
+				</label>
+			</div>
+			<div class="input-container">
+				Hobbies*: 
+				<label for="cricket">
+					<input type="checkbox" id="cricket"/>Cricket
+				</label>
+				<label for="singing">
+					<input type="checkbox" id="singing" />Singing
+				</label>
+				<label for="dancing">
+					<input type="checkbox" id="dancing" />Dancing
+				</label>
+				
+			</div>
+			<div class="input-container">
+				Country:<select name="Country" id="country">
+					<option value="Select Country">Select Country</option>
+					<option value="India">India</option>
+					<option value="USA">USA</option>
+					<option value="Russia">Russia</option>
+				</select>
+			</div>
+			<input type="button" value="Validate" onclick="onValidate()" >
+		</form>
+		<div id="error"></div>
+		<script>
+			function onValidate(){
+				var fName = document.getElementById("fName").value;
+				var lName = document.getElementById("lName").value;
+				var male = document.getElementById("male").checked;
+				var female = document.getElementById("female").checked;
+				var cricket = document.getElementById("cricket").checked;
+				var singing = document.getElementById("singing").checked;
+				var dancing = document.getElementById("dancing").checked;
+				var country = document.getElementById("country").value;
+				var error = document.getElementById("error");
+
+				if(!fName || !lName){
+					error.innerHTML = "Please enter first name and last name";
+					return;
+				}
+				if(!male && !female) {
+					return error.innerHTML = "Please Select Gender";
+				}
+				if(!cricket && !singing && !dancing) {
+					return error.innerHTML = "Please Select Hobbies";
+				}
+				if(country == "Select Country") {
+					return error.innerHTML = "Please Select Country";
+				}
+				
+				error.innerHTML = `
+					<h2>Form Data</h2>
+					<p>First Name: ${fName}</p>
+					<p>Last Name : ${lName}</p>
+					<p>Gender: ${male?"Male":"Female"}</p>
+					<p>Hobbies: ${cricket?"Cricket":""}${singing?",Singing":""}${dancing?",Dancing":""}</p>
+					<p>Country: ${country}</p>
+
+				`
+
+				
+			}
+		</script>
+	</body>
+</html>

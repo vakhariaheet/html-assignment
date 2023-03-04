@@ -1,0 +1,11 @@
+h1 {
+	font-size: 1.5rem;
+	text-align: right;
+	vertical-align: top;
+	color: teal;
+	font-style: italic;
+	text-decoration: underline;
+}
+body {
+	background: url('../../../../images/glsuni.jpeg');
+}

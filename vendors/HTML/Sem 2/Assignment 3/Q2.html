@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Subscribe Form</title>
+		<link rel="stylesheet" href="../../../styles/style.css" />
+
+		<style>
+			.container {
+				padding: 1rem;
+			}
+			label {
+				display: block;
+				margin: 10px 0;
+			}
+			.required {
+				position: relative;
+			}
+			.required::after {
+				content: '*';
+				display: block;
+				position: absolute;
+				top: 2rem;
+				right: 0;
+				color: red;
+			}
+			input {
+				padding: 10px 5px;
+				font-size: 16px;
+				display: block;
+				border: none;
+				border: 1px solid;
+				width: 100%;
+			}
+			h1 {
+				text-transform: uppercase;
+				letter-spacing: 4px;
+				font-family: sans-serif;
+				font-weight: 100;
+			}
+			button {
+				padding: 0.5rem 1rem;
+				background-color: #4169e1;
+				color: #fff;
+				border: none;
+				font-size: 1.3rem;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: #184ded;
+			}
+			.required-text {
+				font-size: 1.2rem;
+				text-align: right;
+			}
+			.required-text span {
+				color: red;
+				display: inline-block;
+				transform: translateY(-0.3rem);
+			}
+            .success{
+                border: 1px solid #ccc;
+                padding: 1rem;
+                background-color: #e6ffe6;
+            }
+            .success p {
+                font-size: 1.2rem;
+                color: #212121;
+            }
+            .success p span {
+                color: #4169e1;
+                font-weight: 600;
+            }
+            .success h2 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-family: sans-serif;
+                font-weight: 100;
+                color: #212121;
+                text-align: center;
+                border-radius: 5px;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="control">
+			<a href="../../../../../index.html">Back To Home</a>
+			<a
+				href="https://github.com/vakhariaheet/html-assignment/blob/main/vendors/HTML/Sem 2/Assignment 3/Q2.html"
+				target="_blank"
+				>View HTML</a
+			>
+		</div>
+		<div class="container">
+			<h1>Subscribe to Our Mailing List</h1>
+			<p class="required-text"><span>*</span> indicates required</p>
+			<form>
+				<label for="email" class="required">
+					<span>Email Address</span>
+					<input type="text" id="email" />
+				</label>
+				<label for="fname">
+					<span>First Name</span>
+					<input type="text" id="fName" />
+				</label>
+				<label for="lName">
+					<span>Last Name</span>
+					<input type="text" id="lName" />
+				</label>
+				<button type="button" onclick="onSubscribe()">Subscribe</button>
+			</form>
+			<p id="error"></p>
+			<script>
+				function onSubscribe() {
+					const email = document.getElementById('email').value;
+                    const fName = document.getElementById('fName').value;
+                    const lName = document.getElementById('lName').value;
+					const errorEle = document.getElementById('error');
+					if (!email) {
+						errorEle.innerHTML = 'Please fill up all the inputs';
+						return;
+					}
+
+					if (!isEmail(email)) return (errorEle.innerHTML = 'Invalid Email');
+					errorEle.innerHTML = `
+                        <div class="success">
+                        <h2>Thank You for Subscribing</h2>
+                        <p>First Name: <span>${fName}</span></p>
+                        <p>Last Name: <span>${lName}</span></p>
+                        <p>Email: <span>${email}</span></p>
+                        </div>
+                        `;
+				}
+				/**
+				 * Checks Where string is a Valid Email
+				 * @params {string} value
+				 * @returns {boolean}
+				 **/
+				function isEmail(value) {
+					var atPos = value.indexOf('@');
+					var dotPos = value.lastIndexOf('.');
+					if (atPos == -1 || dotPos == -1) return false;
+					if (atPos == 0 || dotPos == value.length - 1) return false;
+					if (atPos + 2 > dotPos) return false;
+					return true;
+				}
+			</script>
+		</div>
+	</body>
+</html>
