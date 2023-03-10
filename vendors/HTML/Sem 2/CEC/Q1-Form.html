@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			input {
+				display: block;
+				padding: 1rem;
+				width: 100%;
+				font-size: 1.5rem;
+			}
+
+			form {
+				max-width: 30rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin: 2rem;
+				gap: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<input type="text" id="firstName" placeholder="First Name" />
+			<input type="password" id="password" placeholder="Password" />
+			<input type="text" id="email" placeholder="Email" />
+			<input type="text" id="mobile" placeholder="Mobile" />
+			<input type="button" value="Submit" onclick="onSubmit();" />
+		</form>
+		<p class="message"></p>
+		<script>
+			function onSubmit() {
+				var firstName = document.getElementById('firstName').value;
+				var password = document.getElementById('password').value;
+				var email = document.getElementById('email').value;
+				var mobile = document.getElementById('mobile').value;
+				var msgEle = document.getElementById('message');
+				if (!firstName)
+					return (msgEle.innerHTML = 'First Name Must Not be Blank');
+				if (password.lenght == 8)
+					return (msgEle.innerHTML = 'Password must be 8 characters');
+				if (mobile.lenght == 10)
+					return (msgEle.innerHTML = 'Mobile must be 8 characters');
+				if (!isEmail(email)) return (msgEle.innerHTML = 'Invalid Email');
+				msgEle.innerHTML = 'Form Submitted Successfully';
+			}
+			function isEmail(value) {
+				var atPos = value.indexOf('@');
+				var dotPos = value.lastIndexOf('.');
+				if (atPos == 0 || dotPos == value.length - 1) return false;
+				if (atPos + 2 > dotPos) return false;
+				return true;
+			}
+		</script>
+	</body>
+</html>
